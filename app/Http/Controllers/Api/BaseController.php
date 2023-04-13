@@ -46,6 +46,14 @@ class BaseController
     }
 
     /**
+     * JSON response status 401 Unauthorized
+     * 
+     */
+    public function responseUnauthorized($message = '', $data = []): JsonResponse {
+        return self::response($message, $data, JsonResponse::HTTP_UNAUTHORIZED);
+    }
+
+    /**
      * JSON response status 404 Not Found
      * 
      */
